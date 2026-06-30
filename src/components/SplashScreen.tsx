@@ -25,8 +25,8 @@ export default function SplashScreen() {
           <div style={carContainerStyle}>
             {/* Animated Car SVG */}
             <motion.div
-              initial={{ x: "-50vw", opacity: 0 }}
-              animate={{ x: "50vw", opacity: 1 }}
+              initial={{ x: "-100vw", opacity: 0 }}
+              animate={{ x: "100vw", opacity: 1 }}
               transition={{ duration: 2, ease: "easeInOut" }}
             >
               <svg 
@@ -63,7 +63,7 @@ const splashStyle: React.CSSProperties = {
   position: "fixed",
   top: 0,
   left: 0,
-  width: "100vw",
+  width: "100%",
   height: "100vh",
   backgroundColor: "var(--bg-primary)",
   display: "flex",

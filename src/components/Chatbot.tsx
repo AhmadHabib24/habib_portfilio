@@ -151,8 +151,8 @@ export default function Chatbot() {
 // Styles
 const floatingBtnStyle: React.CSSProperties = {
   position: 'fixed',
-  bottom: '30px',
-  right: '30px',
+  bottom: '50px',
+  right: '20px',
   width: '60px',
   height: '60px',
   borderRadius: '30px',
@@ -169,10 +169,12 @@ const floatingBtnStyle: React.CSSProperties = {
 
 const chatWindowStyle: React.CSSProperties = {
   position: 'fixed',
-  bottom: '100px',
-  right: '30px',
-  width: '350px',
+  bottom: '120px',
+  right: '20px',
+  width: 'calc(100vw - 40px)',
+  maxWidth: '350px',
   height: '500px',
+  maxHeight: 'calc(100vh - 140px)',
   borderRadius: '20px',
   display: 'flex',
   flexDirection: 'column',

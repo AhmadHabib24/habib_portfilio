@@ -1,0 +1,121 @@
+.header {
+  position: fixed;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 40px);
+  max-width: 900px;
+  background-color: #0c1b16;
+  border-radius: 50px;
+  padding: 8px 8px 8px 32px;
+  z-index: 100;
+  font-family: var(--font-poppins), sans-serif;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logoLink {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  gap: 36px;
+  align-items: center;
+}
+
+.link {
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 15px;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.link:hover {
+  opacity: 0.8;
+}
+
+.btn {
+  padding: 12px 32px;
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 40px;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.mobileMenuBtn {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 8px;
+}
+
+/* Mobile Nav Drawer */
+.mobileNav {
+  display: none;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  right: 0;
+  background-color: #0c1b16;
+  border-radius: 20px;
+  padding: 20px;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.mobileNav.open {
+  display: flex;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 768px) {
+  .header {
+    left: 15px;
+    right: 15px;
+    width: auto;
+    transform: none;
+    padding: 10px 15px;
+    top: 15px;
+  }
+
+  .nav {
+    display: none; /* Hide desktop nav */
+  }
+
+  .mobileMenuBtn {
+    display: block; /* Show hamburger button */
+  }
+
+  .btn {
+    display: none; /* Hide CTA button on mobile header to save space */
+  }
+
+  .mobileNav .btn {
+    display: inline-block; /* Show CTA button in mobile nav */
+    text-align: center;
+  }
+}
